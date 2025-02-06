@@ -45,18 +45,19 @@
 
 
    // API ENDPOINT
-   app.get('api/classify-number', async (res, req) =>{
-      const { number } = req.query;
+   app.get('/api/classify-number', async (req, res) =>{
+      console.log(req.query)
+      const numberParam = req.query.number;
 
       // Validate input
-      if (!number || isNaN(number)) {
+      if (!numberParam || isNaN(numberParam)) {
          return res.status(400).json({
-            number,
+            numberParam,
             error: true,
          });
       }
 
-      const num = parseInt(number);
+      const num = parseInt(numberParam);
       const properties = [];
 
       if (isArmstrong(num)) properties.push("armstrong");
