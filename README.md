@@ -6,14 +6,16 @@
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-      git clone https://github.com/yourusername/number-classification-api.git
-         cd number-classification-api
+      git clone https://github.com/clementnduonyi/hng2-stage-one-number-classification.git
+         cd hng12-stage-one-number-classification
 2. Install dependencies:
-   ```npm install
-   ```
+   ```bash
+      npm install
+   
 3. Run the server:
-   ```node index.js
-   ```
+   ```bash
+      node index.js
+   
    Test the API: Visit http://localhost:3000/api/classify-number?number=371 in your browser.
 
 ## API Documentation
