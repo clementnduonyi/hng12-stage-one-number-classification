@@ -45,8 +45,8 @@
 
 
    // API ENDPOINT
-   app.get('/api/classify-number', async (req, res) =>{
-      console.log(req.query)
+   app.get('/api/classify-number', (req, res) =>{
+      // console.log(req.query)
       const numberParam = req.query.number;
 
       // Validate input
@@ -66,7 +66,7 @@
       
       try {
          // Get fun fact from numbersapi
-         const funFactResponse = await axios.get(`http://numbersapi.com/${num}/math?json`);
+         const funFactResponse = axios.get(`http://numbersapi.com/${num}/math?json`);
          const funFact = funFactResponse.data.text;
 
          res.json({
